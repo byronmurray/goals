@@ -26,7 +26,62 @@
                 <div class="panel-heading">Main Content</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    
+                    <h2>{{ $goal->title }}</h2>
+
+                    <p>Created {{ $goal->created_at }} | Goal to be completed in xxx days/weeks/months</p>
+
+                    <strong>Specific</strong>
+
+                    <p>{{ $goal->specific }}</p>
+
+                    <strong>Measurable</strong>
+
+                    <p>{{ $goal->measurable }}</p>
+
+                    <strong>Achievable</strong>
+
+                    <p>{{ $goal->achievable }}</p>
+
+                    <strong>Relevant</strong>
+
+                    <p>{{ $goal->relevant }}</p>
+
+                    <strong>Timely</strong>
+
+                    <p>{{ $goal->time }}</p>
+
+                    <strong>Summary</strong>
+
+                    <p>{{ $goal->summary }}</p>
+
+
+                    <form method="" action="">
+
+                      <div class="form-group">
+                        <label>Notify Me</label>
+                        <select>
+                            <option value="">Daily</option>
+                            <option value="">Weekly</option>
+                            <option value="">Fortnightly</option>
+                            <option value="">Monthly</option>
+                            <option value="">Quarterly</option>
+                            <option value="">Yearly</option>
+                            <option value="">Never</option>
+                        </select>
+                      </div>
+                   
+                      <div class="form-group">
+                        <label>Comments</label>
+                        <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                      </div>
+
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-default">Add Comment</button>
+                      </div>
+
+                    </form>
+
                 </div>
             </div>
         </div>

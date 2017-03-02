@@ -1,5 +1,7 @@
 <?php
 
+use App\Goal;
+use App\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,6 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        User::truncate();
+        Goal::truncate();
+
+        factory(User::class, 5)->create();
+        factory(Goal::class, 10)->create();
     }
 }

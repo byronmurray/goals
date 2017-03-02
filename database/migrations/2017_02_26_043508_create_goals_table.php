@@ -22,6 +22,7 @@ class CreateGoalsTable extends Migration
             $table->text('achievable');
             $table->text('relevant');
             $table->text('time');
+            $table->text('summary');
             $table->boolean('completed')->default(0); //make this default false
             $table->timestamps();
         });
