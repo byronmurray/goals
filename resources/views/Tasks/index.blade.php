@@ -11,7 +11,7 @@
                 <div class="panel-body">
                     <ul>
                         <a href="/"><li>Home</li></a>
-                        <a href="/tasks"><li>Quickies</li></a>
+                        <a href="/todo"><li>Quickies</li></a>
                         <a href="/goals/create"><li>New Goal</li></a>
                         <a href="#"><li>Current</li></a>
                         <a href="#"><li>Completed</li></a>
@@ -23,10 +23,19 @@
 
         <div class="col-md-6">
             <div class="panel panel-default">
-                <div class="panel-heading">Main Content</div>
+                <div class="panel-heading">My Todo List</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    <ul>
+                        @foreach ($tasks as $task)
+                            <li> {{ $task->title }} <input type="checkbox"></li>
+                        @endforeach
+                    </ul>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default">Update</button>
+                    </div>
+
                 </div>
             </div>
         </div>

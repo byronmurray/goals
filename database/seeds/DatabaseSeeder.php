@@ -1,6 +1,7 @@
 <?php
 
 use App\Goal;
+use App\Task;
 use App\User;
 use Illuminate\Database\Seeder;
 
@@ -17,6 +18,7 @@ class DatabaseSeeder extends Seeder
         Goal::truncate();
 
         factory(User::class, 5)->create();
+        factory(Task::class, 5)->create();
         factory(Goal::class, 10)->create();
     }
 }

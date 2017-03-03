@@ -11,7 +11,7 @@
                 <div class="panel-body">
                     <ul>
                         <a href="/"><li>Home</li></a>
-                        <a href="/tasks"><li>Quickies</li></a>
+                        <a href="/todo"><li>Quickies</li></a>
                         <a href="/goals/create"><li>New Goal</li></a>
                         <a href="#"><li>Current</li></a>
                         <a href="#"><li>Completed</li></a>

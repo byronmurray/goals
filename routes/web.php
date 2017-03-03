@@ -16,11 +16,14 @@ Route::get('/', function () {
 });
 
 Route::get('/goals', 'GoalController@index');
-Route::get('/goals/{goal}', 'GoalController@show');
 Route::get('/goals/create', 'GoalController@create');
+Route::get('/goals/{goal}', 'GoalController@show');
 Route::post('/goals', 'GoalController@store');
 
-
+Route::get('/tasks', 'TaskController@index');
+Route::get('/tasks/{task}', 'TaskController@show');
+Route::get('/tasks/create', 'TaskController@create');
+Route::post('/tasks', 'TaskController@store');
 
 Auth::routes();
 

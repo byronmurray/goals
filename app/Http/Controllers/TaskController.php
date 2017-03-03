@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Goal;
+use App\Task;
 use Illuminate\Http\Request;
 
-class GoalController extends Controller
+class TaskController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class GoalController extends Controller
     public function index()
     {
         
-        $goals = Goal::all();
+        $tasks = task::all();
 
-        return view('goals.index', compact('goals') );
+        return view('tasks.index', compact('tasks') );
 
     }
 
@@ -29,7 +29,7 @@ class GoalController extends Controller
     public function create()
     {
         
-        return view('goals.create');
+        return view('tasks.create');
 
     }
 
@@ -50,9 +50,9 @@ class GoalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Goal $goal)
+    public function show(Task $task)
     {
-        return view('goals.show', compact('goal') );
+        return view('tasks.show', compact('task') );
 
     }
 

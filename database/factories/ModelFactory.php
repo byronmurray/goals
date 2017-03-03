@@ -37,3 +37,13 @@ $factory->define(App\Goal::class, function (Faker\Generator $faker) {
         'summary' => $faker->sentence,
     ];
 });
+
+
+$factory->define(App\Task::class, function (Faker\Generator $faker) {
+
+    return [
+        'user_id' => 1,
+        'title' => $faker->jobTitle,
+        'time' => $faker->sentence,
+    ];
+});
